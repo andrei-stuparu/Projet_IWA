@@ -1,0 +1,14 @@
+language: java
+jdk:
+  - openjdk11
+services:
+  - docker
+git:
+  depth: false
+# safelist
+branches:
+  only:
+    - alert
+    - auth
+
+script: ./mvnw clean install
